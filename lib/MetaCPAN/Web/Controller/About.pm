@@ -63,9 +63,6 @@ sub stats : Local {
     # Only want a day for this, so they get refreshed
     $c->cdn_cache_ttl( $c->cdn_times->{one_day} );
 
-    # Only want a day for this, so they get refreshed
-    $c->cdn_cache_ttl( $c->cdn_times->{one_day} );
-
     $c->stash( template => 'about/stats.html' );
 
     # See if user has the fastly credentials
