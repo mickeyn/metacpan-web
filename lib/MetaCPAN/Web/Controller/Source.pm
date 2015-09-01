@@ -8,7 +8,7 @@ BEGIN { extends 'MetaCPAN::Web::Controller' }
 sub index : PathPart('source') : Chained('/') : Args {
     my ( $self, $c, @module ) = @_;
 
-    $c->add_surrogate_key('source');
+    $c->add_surrogate_key('SOURCE');
     $c->res->header(
         'Cache-Control' => 'max-age=' . $c->cdn_times->{one_hour} );
 

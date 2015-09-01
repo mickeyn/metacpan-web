@@ -8,7 +8,7 @@ BEGIN { extends 'MetaCPAN::Web::Controller' }
 sub index : Path {
     my ( $self, $c ) = @_;
 
-    $c->add_surrogate_key('mirrors');
+    $c->add_surrogate_key('MIRRORS');
     $c->res->header(
         'Cache-Control' => 'max-age=' . $c->cdn_times->{one_day} );
     $c->cdn_cache_ttl( $c->cdn_times->{one_day} );
